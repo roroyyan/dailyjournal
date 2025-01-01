@@ -1,0 +1,63 @@
+.container1 {
+  background-image: url(https://c0.wallpaperflare.com/preview/170/751/765/rubiks-cube-rubik-s-cube-cube-cubes.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0, 5;
+}
+
+section {
+  padding-top: 0;
+  padding-bottom: 50px;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: ;
+}
+* {
+  transition: 0.3s;
+}
+
+.navbar {
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+.datetime {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+.hero-section {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .datetime {
+    font-size: 14px;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+#gallery,
+#article,
+.footer img,
+i {
+  cursor: pointer;
+}
+
+.panah {
+  text-align: right;
+  padding: 10px;
+  scroll-behavior: smooth;
+  
+}
