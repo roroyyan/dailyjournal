@@ -1,3 +1,6 @@
+<?php
+include "koneksi.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="">
 
@@ -87,32 +90,40 @@
   </section>
   <!-- Hero End -->
 
-  <!-- Article Start -->
-  <section id="article" class="text-center p-5">
-    <div class="container">
-      <h1 class="fw-bold display-4 pb-3 pt-5">Article</h1>
-      <div class="row gy-5 justify-content-center pt-3 pb-3">
-        <div class="col-12 col-lg-6">
-          <img src=".//img/RubArtic.jpg" alt="" class="img-fluid rounded-5" />
+<!-- article begin -->
+<section id="article" class="text-center p-5">
+  <div class="container">
+    <h1 class="fw-bold display-4 pb-3">article</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <?php
+      $sql = "SELECT * FROM article ORDER BY tanggal DESC";
+      $hasil = $conn->query($sql); 
+
+      while($row = $hasil->fetch_assoc()){
+      ?>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/<?= $row["gambar"]?>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><?= $row["judul"]?></h5>
+              <p class="card-text">
+                <?= $row["isi"]?>
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">
+                <?= $row["tanggal"]?>
+              </small>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-lg-6">
-          <p style="text-align: justify">
-            Rubik's Cube adalah permainan teka-teki tiga dimensi yang terdiri dari kubus berukuran 3x3, dirancang untuk
-            menguji logika dan ketangkasan. Diciptakan oleh Ernő Rubik pada tahun 1974, awalnya disebut "Magic Cube."
-            Setelah diperkenalkan secara internasional pada tahun 1980, permainan ini dengan cepat menjadi fenomena
-            global.
-          </p>
-          <p style="text-align: justify">
-            Permainan ini memiliki tujuan untuk memutar lapisan kubus sehingga setiap sisi memiliki satu warna yang
-            sama. Selain varian 3x3, terdapat juga variasi seperti 2x2, 4x4, dan bentuk unik lainnya seperti Pyraminx
-            dan Megaminx. Rubik's Cube terus menarik minat orang dari berbagai usia dan tetap populer hingga kini, baik
-            sebagai hobi maupun dalam kompetisi.
-          </p>
-        </div>
-      </div>
+        <?php
+      }
+      ?> 
     </div>
-  </section>
-  <!-- Article End -->
+  </div>
+</section>
+<!-- article end -->
 
   <!-- Gallery Start -->
   <section id="gallery">
@@ -350,7 +361,7 @@
   <!-- Footer Start -->
 
   <footer class="footer text-center p-3 shadow-lg">
-    Copyright © 2024 Royyanfds. All Rights Reserved
+    Copyright © 2024 Royyan All Rights Reserved
     <div>
       <i class="bi bi-instagram"></i>
       <i class="bi bi-twitter-x"></i>

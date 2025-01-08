@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   <footer class="bg-gray-800 p-2  text-center text-white">
-    <p>&copy;Copyright © 2024 RO All Rights Reserved</p>
+    <p>&copy;Copyright © 2024 Royyan All Rights Reserved</p>
   </footer>
 </body>
 </html>

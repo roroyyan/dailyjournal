@@ -81,7 +81,6 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- nav end -->
     <!-- content begin -->
-   <!-- content begin -->
 <section id="content" class="p-5">
     <div class="container">
         <?php
@@ -99,7 +98,6 @@ if (!isset($_SESSION['username'])) {
         ?>
     </div>
 </section>
-<!-- content end -->
     <!-- content end -->
     <!-- footer begin -->
     <footer class="text-center p-5 bg-danger-subtle">
@@ -114,7 +112,7 @@ if (!isset($_SESSION['username'])) {
         ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
         ></a>
     </div>
-    <div>Royyan &copy; 2023</div>
+    <div>Royyan &copy; 2025</div>
     </footer>
     <!-- footer end -->
     <script

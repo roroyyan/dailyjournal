@@ -3,14 +3,8 @@
 $sql1 = "SELECT * FROM article ORDER BY tanggal DESC";
 $hasil1 = $conn->query($sql1);
 
-// Cek apakah query berhasil dijalankan
-if ($hasil1) {
-    //menghitung jumlah baris data article
-    $jumlah_article = $hasil1->num_rows;
-} else {
-    // Jika query gagal, set jumlah_article ke 0
-    $jumlah_article = 0;
-}
+//menghitung jumlah baris data article
+$jumlah_article = $hasil1->num_rows;
 
 //query untuk mengambil data gallery
 //$sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
