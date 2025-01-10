@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <div class="flex items-center justify-center h-full">
     <div class=" bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md w-full">
-      <h2 class="text-2xl font-bold text-white text-center mb-6">LOG1N</h2>
+      <h2 class="text-2xl font-bold text-white text-center mb-6">LOGIN</h2>
       
       <form action="login.php" method="POST" enctype="multipart/form-data">
 
